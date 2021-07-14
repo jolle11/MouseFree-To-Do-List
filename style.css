@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -9,3 +11,38 @@ html {
     margin: 0;
     padding: 0;
 }
+body {
+    height: 60vh;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex {
+    display: flex;
+}
+.hidden {
+    display: none;
+}
+.tt-padding {
+    padding: 0 2rem;
+}
+
+/* ALL, COMPLETED, UNCOMPLETED & DELETED */
+.acud {
+    justify-content: center;
+}
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
+
+/* TODO INPUT */
+
+input {
+    width: 30rem;
+}
+
+/* TODOS */
