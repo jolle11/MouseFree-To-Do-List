@@ -4,7 +4,29 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
         <title>MouseFree To Do List</title>
     </head>
-    <body></body>
+    <body>
+        <main>
+            <!-- All, Completed, Uncompleted and Deleted sections-->
+            <div class="acud flex">
+                <p id="a-short" class="">A</p>
+                <p id="a-long" class="tt-padding">All</p>
+                <p id="c-short" class="green">C</p>
+                <p id="c-long" class="green tt-padding">Completed</p>
+                <p id="u-short" class="red">U</p>
+                <p id="u-long" class="red tt-padding">Uncompleted</p>
+                <p id="d-short" class="">D</p>
+                <p id="d-long" class="tt-padding">Deleted</p>
+            </div>
+            <div class="todos-input">
+                <!-- Input for the todo. -->
+                <input type="text" name="todo-input" id="todo-input" placeholder="Write something to do ✍️" />
+            </div>
+            <!-- Where the todos are going to be when written. -->
+            <div class="todos"></div>
+        </main>
+        <script src="script.js"></script>
+    </body>
 </html>
