@@ -28,6 +28,8 @@ The goal is to make a page which is **100% navigable** with the keyboard.
 
 ## To Do
 
+-   Change the action keys table according to the values I modified while coding.
+
 ### HTML
 
 ### CSS
@@ -48,7 +50,6 @@ The goal is to make a page which is **100% navigable** with the keyboard.
 -   Create functions fo ENTER.
 -   Create function for E.
 -   Create function for R.
--   Create function for ESC (Maybe there's no need for a function and works already when clicking on ESC).
 -   Comment for better understanding.
 
 ---
@@ -71,6 +72,7 @@ NONE FOR THE MOMENT
 -   Create functions for A, C, U and D.
     -   ~~When key is pressed display correct title.~~
     -   When key is pressed display corresponding to do's.
+-   ~~Create function for ESC.~~
 
 ---
 
