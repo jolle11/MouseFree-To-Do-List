@@ -12,11 +12,12 @@ html {
     padding: 0;
 }
 body {
-    height: 60vh;
+    height: 100vh;
     font-size: 3rem;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
+    padding-top: 15rem;
 }
 .flex {
     display: flex;
@@ -40,10 +41,20 @@ body {
 }
 
 /* TODO INPUT */
-
+.todos-input {
+    padding-top: 5rem;
+    justify-content: center;
+}
 input {
     width: 30rem;
     text-align: center;
+    border: none;
+    outline: none;
 }
 
 /* TODOS */
+.todos {
+    padding-top: 5rem;
+    align-items: center;
+    flex-direction: column;
+}
