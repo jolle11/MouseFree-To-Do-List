@@ -16,7 +16,7 @@ The goal is to make a page which is **100% navigable** with the keyboard.
 |       D        | Shows deleted to do.                                                                               | D, d                      | KeyD                                                                   |
 | UP/DOWN ARROWS | Vertical navigation between to do.                                                                 | ArrowUp, ArrowDown        | ArrowUp, ArrowDown                                                     |
 | NUMBERS (1-9)  | Selection of a specific todo (works in order).                                                     | 1, 2, 3, 4, 5, 6, 7, 8, 9 | Digit1, Digit2, Digit3, Digit4, Digit5, Digit6, Digit7, Digit8, Digit9 |
-|    NUMBER 0    | Used to start writing.                                                                             | 0                         | Digit0                                                                 |
+|     ENTER      | Used to focus the input to add the todo.                                                           | Enter                     | Enter                                                                  |
 |     ENTER      | Add todo to the list (once it's written).                                                          | Enter                     | Enter                                                                  |
 |     ENTER      | Complete a todo (when selected).                                                                   | Enter                     | Enter                                                                  |
 |     DELETE     | Deletes a todo (when selected).                                                                    | Backspace                 | Backspace                                                              |
@@ -28,9 +28,13 @@ The goal is to make a page which is **100% navigable** with the keyboard.
 
 ## To Do
 
+-   ~~Search for the used names and codes.~~
 -   Change the action keys table according to the values I modified while coding.
 
 ### HTML
+
+-   ~~Fill the HTML.~~
+-   ~~Comment for better understanding.~~
 
 ### CSS
 
@@ -41,38 +45,20 @@ The goal is to make a page which is **100% navigable** with the keyboard.
 ### JAVASCRIPT
 
 -   Create classes needed
--   Create functions for A, C, U and D. HALFWAY
-    -   When key is pressed display correct title.
+-   Create functions for A, C, U and D. **HALFWAY**
+    -   ~~When key is pressed display correct title.~~
     -   When key is pressed display corresponding to do's.
 -   Create function for UP/DOWN ARROWS.
 -   Create function for NUMBERS (1-9).
 -   Create function for number 0.
--   Create functions fo ENTER.
+-   Create functions for ENTER.
+    -   ~~Focus to the input~~.
+    -   ~~Add todo~~.
+    -   Complete a todo.
 -   Create function for E.
 -   Create function for R.
--   Comment for better understanding.
-
----
-
-## Done
-
--   ~~Search for the used names and codes.~~
-
-### HTML
-
--   ~~Fill the HTML.~~
--   ~~Comment for better understanding.~~
-
-### CSS
-
-NONE FOR THE MOMENT
-
-### JAVASCRIPT
-
--   Create functions for A, C, U and D.
-    -   ~~When key is pressed display correct title.~~
-    -   When key is pressed display corresponding to do's.
 -   ~~Create function for ESC.~~
+-   Comment for better understanding.
 
 ---
 
