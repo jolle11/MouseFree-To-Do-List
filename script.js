@@ -76,6 +76,22 @@ function showAll() {
     cLong.classList.add('hidden');
     uLong.classList.add('hidden');
     dLong.classList.add('hidden');
+    // All completed, uncompleted and deleted todos
+    const completed = document.querySelectorAll('.completed');
+    const completedArr = Array.from(completed);
+    const uncompleted = document.querySelectorAll('.uncompleted');
+    const uncompletedArr = Array.from(uncompleted);
+    const deleted = document.querySelectorAll('.deleted');
+    const deletedArr = Array.from(deleted);
+    for (i = 0; i < uncompletedArr.length; i++) {
+        uncompletedArr[i].classList.remove('hidden');
+    }
+    for (i = 0; i < completedArr.length; i++) {
+        completedArr[i].classList.remove('hidden');
+    }
+    for (i = 0; i < deletedArr.length; i++) {
+        deletedArr[i].classList.remove('hidden');
+    }
 }
 function showCompleted() {
     aShort.classList.remove('hidden');
@@ -86,6 +102,22 @@ function showCompleted() {
     cShort.classList.add('hidden');
     uLong.classList.add('hidden');
     dLong.classList.add('hidden');
+    // All completed, uncompleted and deleted todos
+    const completed = document.querySelectorAll('.completed');
+    const completedArr = Array.from(completed);
+    const uncompleted = document.querySelectorAll('.uncompleted');
+    const uncompletedArr = Array.from(uncompleted);
+    const deleted = document.querySelectorAll('.deleted');
+    const deletedArr = Array.from(deleted);
+    for (i = 0; i < uncompletedArr.length; i++) {
+        uncompletedArr[i].classList.add('hidden');
+    }
+    for (i = 0; i < completedArr.length; i++) {
+        completedArr[i].classList.remove('hidden');
+    }
+    for (i = 0; i < deletedArr.length; i++) {
+        deletedArr[i].classList.add('hidden');
+    }
 }
 function showUncompleted() {
     aShort.classList.remove('hidden');
@@ -96,6 +128,22 @@ function showUncompleted() {
     cLong.classList.add('hidden');
     uShort.classList.add('hidden');
     dLong.classList.add('hidden');
+    // All completed, uncompleted and deleted todos
+    const completed = document.querySelectorAll('.completed');
+    const completedArr = Array.from(completed);
+    const uncompleted = document.querySelectorAll('.uncompleted');
+    const uncompletedArr = Array.from(uncompleted);
+    const deleted = document.querySelectorAll('.deleted');
+    const deletedArr = Array.from(deleted);
+    for (i = 0; i < uncompletedArr.length; i++) {
+        uncompletedArr[i].classList.remove('hidden');
+    }
+    for (i = 0; i < completedArr.length; i++) {
+        completedArr[i].classList.add('hidden');
+    }
+    for (i = 0; i < deletedArr.length; i++) {
+        deletedArr[i].classList.add('hidden');
+    }
 }
 function showDeleted() {
     aShort.classList.remove('hidden');
@@ -106,6 +154,22 @@ function showDeleted() {
     cLong.classList.add('hidden');
     uLong.classList.add('hidden');
     dShort.classList.add('hidden');
+    // All completed, uncompleted and deleted todos
+    const completed = document.querySelectorAll('.completed');
+    const completedArr = Array.from(completed);
+    const uncompleted = document.querySelectorAll('.uncompleted');
+    const uncompletedArr = Array.from(uncompleted);
+    const deleted = document.querySelectorAll('.deleted');
+    const deletedArr = Array.from(deleted);
+    for (i = 0; i < uncompletedArr.length; i++) {
+        uncompletedArr[i].classList.add('hidden');
+    }
+    for (i = 0; i < completedArr.length; i++) {
+        completedArr[i].classList.add('hidden');
+    }
+    for (i = 0; i < deletedArr.length; i++) {
+        deletedArr[i].classList.remove('hidden');
+    }
 }
 
 // Function to focus the input when clicking ENTER
@@ -124,7 +188,7 @@ function addTodo() {
     inputValue = inputSelect.value.trimStart();
     //To Do div
     const todoDiv = document.createElement('div');
-    todoDiv.classList.add('todo');
+    todoDiv.classList.add('uncompleted');
     //Create li
     const newTodo = document.createElement('p');
     newTodo.innerText = inputValue;
