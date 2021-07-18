@@ -25,7 +25,18 @@
                 <input type="text" name="todo-input" id="todo-input" placeholder="Press ENTER to start writing ✍️" />
             </div>
             <!-- Where the todos are going to be when written. -->
-            <div class="todos flex"></div>
+            <div class="todos flex">
+                <!-- Structure when the todo is created -->
+                <div class="completed">
+                    <p class="todo-text">Do this and that</p>
+                </div>
+                <div class="uncompleted">
+                    <p class="todo-text">Do this and that</p>
+                </div>
+                <div class="deleted">
+                    <p class="todo-text">Do this and that</p>
+                </div>
+            </div>
         </main>
         <script src="script.js"></script>
     </body>
