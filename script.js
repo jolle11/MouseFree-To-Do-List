@@ -1,4 +1,5 @@
 // SELECTORS
+
 const todoInput = document.getElementById('todo-input');
 const todos = document.querySelector('.todos');
 
@@ -19,6 +20,7 @@ const dLong = document.querySelector('#d-long');
 // and short title for All, Uncompleted and Deleted and only the completed to do's.
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.code === 'Enter') {
+        showUncompleted(e);
         focusInput(e);
         todoInput.value = ' ';
     } else if (e.key === 'Escape' || e.code === 'Escape') {
@@ -116,10 +118,20 @@ function unfocusInput() {
     document.getElementById('todo-input').blur();
 }
 
-// The next function adds a to do to the list
+// The next function adds a todo to the list
 function addTodo() {
     inputSelect = document.querySelector('#todo-input');
-    inputValue = inputSelect.value;
-    console.log(inputValue.trimStart());
+    inputValue = inputSelect.value.trimStart();
+    //To Do div
+    const todoDiv = document.createElement('div');
+    todoDiv.classList.add('todo');
+    //Create li
+    const newTodo = document.createElement('p');
+    newTodo.innerText = inputValue;
+    newTodo.classList.add('todo-text');
+    todoDiv.appendChild(newTodo);
+    //Append todo list
+    todos.appendChild(todoDiv);
+    console.log(inputValue);
     console.log('Works!');
 }
