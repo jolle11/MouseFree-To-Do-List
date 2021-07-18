@@ -39,6 +39,18 @@ body {
 .red {
     color: red;
 }
+.completed {
+    color: white;
+    background: green;
+}
+.uncompleted {
+    color: white;
+    background: red;
+}
+.deleted {
+    color: white;
+    background: black;
+}
 
 /* TODO INPUT */
 .todos-input {
