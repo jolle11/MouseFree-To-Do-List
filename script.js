@@ -2,6 +2,11 @@
 
 const todoInput = document.getElementById('todo-input');
 const todos = document.querySelector('.todos');
+const todo = document.querySelector('.todo');
+const completed = document.querySelector('.completed');
+const uncompleted = document.querySelector('.uncompleted');
+const deleted = document.querySelector('.deleted');
+let count = 0;
 
 //ACUD selectors
 const aShort = document.querySelector('#a-short');
@@ -16,35 +21,35 @@ const dLong = document.querySelector('#d-long');
 // EVENT LISTENERS
 
 // This next event listener has the direct function to change the display of each titles
-// and to show the correct to do's. Example: Key C shows title completed
+// and to show the correct to do's, etc. Example: Key C shows title completed
 // and short title for All, Uncompleted and Deleted and only the completed to do's.
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.code === 'Enter') {
+    if (e.code === 'Enter') {
         showUncompleted(e);
         focusInput(e);
         todoInput.value = ' ';
-    } else if (e.key === 'Escape' || e.code === 'Escape') {
+    } else if (e.code === 'Escape') {
         unfocusInput(e);
         todoInput.value = '';
-    } else if (e.key === 'a' || e.code === 'KeyA') {
+    } else if (e.code === 'KeyA') {
         if (todoInput.value === '') {
             showAll(e);
         } else {
             return;
         }
-    } else if (e.key === 'c' || e.code === 'KeyC') {
+    } else if (e.code === 'KeyC') {
         if (todoInput.value === '') {
             showCompleted(e);
         } else {
             return;
         }
-    } else if (e.key === 'u' || e.code === 'KeyU') {
+    } else if (e.code === 'KeyU') {
         if (todoInput.value === '') {
             showUncompleted(e);
         } else {
             return;
         }
-    } else if (e.key === 'd' || e.code === 'KeyD') {
+    } else if (e.code === 'KeyD') {
         if (todoInput.value === '') {
             showDeleted(e);
         } else {
@@ -55,8 +60,77 @@ document.addEventListener('keydown', (e) => {
 
 // This event listener calls the function addTodo, which adds the to do to the list.
 todoInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.code === 'Enter') {
+    if (e.code === 'Enter') {
         addTodo(e);
+    }
+});
+
+// The next event listener allows you with a direct function to jump between todos with Up and Down arrows
+// 1ST Part
+document.addEventListener('keydown', (e) => {
+    if (e.code === 'ArrowDown' && todoInput.value === '') {
+        console.log('Arrowdown');
+        // All completed, uncompleted and deleted todos
+        let completed = document.querySelectorAll('.completed');
+        let completedArr = Array.from(completed);
+        let uncompleted = document.querySelectorAll('.uncompleted');
+        let uncompletedArr = Array.from(uncompleted);
+        let deleted = document.querySelectorAll('.deleted');
+        let deletedArr = Array.from(deleted);
+        if (aLong.classList.contains('hidden') && cLong.classList.contains('hidden') && dLong.classList.contains('hidden')) {
+            uncompletedArr[count].focus();
+        }
+        if (aLong.classList.contains('hidden') && uLong.classList.contains('hidden') && dLong.classList.contains('hidden')) {
+            completedArr[count].focus();
+        }
+        if (aLong.classList.contains('hidden') && cLong.classList.contains('hidden') && uLong.classList.contains('hidden')) {
+            deletedArr[count].focus();
+        }
+    }
+});
+
+todo.addEventListener('keydown', (e) => {
+    if (e.code === 'ArrowDown') {
+        let uncompleted = document.querySelectorAll('.uncompleted');
+        let uncompletedArr = Array.from(uncompleted);
+        console.log(count);
+        count++;
+        console.log(count);
+        uncompletedArr[count].focus();
+        // for (i = 0; i < uncompletedArr.length; i++) {
+        //     if (e.code === 'ArrowDown') {
+        //         console.log(count);
+        //         uncompletedArr[i].focus();
+        //         count += 1;
+        //         console.log(count);
+        //     } else if (e.code === 'ArrowDown') {
+        //         uncompletedArr[i].blur();
+        //     }
+        // }
+    }
+});
+////////////////////////////////////////////////////////////////////////////////////////
+// EVENT LISTENER THAT WILL CALL THE FUNCTION FOR THE NUMBERS TO JUMP BETWEEN TODOS ////
+////////////////////////////////////////////////////////////////////////////////////////
+
+// todo.addEventListener('keydown', (e) => {
+//     if (e.code === 'KeyF') {
+//         completeTodo();
+//     } else if (e.code === 'Backspace') {
+//         deleteTodo(e);
+//     } else if (e.code === 'KeyE') {
+//         editTodo(e);
+//     } else if (e.code === 'KeyR') {
+//         resetTodo(e);
+//     } else if (e.code === 'Escape') {
+//         unfocusTodo(e);
+//     }
+// });
+
+uncompleted.addEventListener('keydown', (e) => {
+    if (e.code === 'KeyF') {
+        console.log('FFFFFFFFF! ');
+        completeTodo();
     }
 });
 
@@ -77,12 +151,12 @@ function showAll() {
     uLong.classList.add('hidden');
     dLong.classList.add('hidden');
     // All completed, uncompleted and deleted todos
-    const completed = document.querySelectorAll('.completed');
-    const completedArr = Array.from(completed);
-    const uncompleted = document.querySelectorAll('.uncompleted');
-    const uncompletedArr = Array.from(uncompleted);
-    const deleted = document.querySelectorAll('.deleted');
-    const deletedArr = Array.from(deleted);
+    let completed = document.querySelectorAll('.completed');
+    let completedArr = Array.from(completed);
+    let uncompleted = document.querySelectorAll('.uncompleted');
+    let uncompletedArr = Array.from(uncompleted);
+    let deleted = document.querySelectorAll('.deleted');
+    let deletedArr = Array.from(deleted);
     for (i = 0; i < uncompletedArr.length; i++) {
         uncompletedArr[i].classList.remove('hidden');
     }
@@ -103,12 +177,12 @@ function showCompleted() {
     uLong.classList.add('hidden');
     dLong.classList.add('hidden');
     // All completed, uncompleted and deleted todos
-    const completed = document.querySelectorAll('.completed');
-    const completedArr = Array.from(completed);
-    const uncompleted = document.querySelectorAll('.uncompleted');
-    const uncompletedArr = Array.from(uncompleted);
-    const deleted = document.querySelectorAll('.deleted');
-    const deletedArr = Array.from(deleted);
+    let completed = document.querySelectorAll('.completed');
+    let completedArr = Array.from(completed);
+    let uncompleted = document.querySelectorAll('.uncompleted');
+    let uncompletedArr = Array.from(uncompleted);
+    let deleted = document.querySelectorAll('.deleted');
+    let deletedArr = Array.from(deleted);
     for (i = 0; i < uncompletedArr.length; i++) {
         uncompletedArr[i].classList.add('hidden');
     }
@@ -129,12 +203,12 @@ function showUncompleted() {
     uShort.classList.add('hidden');
     dLong.classList.add('hidden');
     // All completed, uncompleted and deleted todos
-    const completed = document.querySelectorAll('.completed');
-    const completedArr = Array.from(completed);
-    const uncompleted = document.querySelectorAll('.uncompleted');
-    const uncompletedArr = Array.from(uncompleted);
-    const deleted = document.querySelectorAll('.deleted');
-    const deletedArr = Array.from(deleted);
+    let completed = document.querySelectorAll('.completed');
+    let completedArr = Array.from(completed);
+    let uncompleted = document.querySelectorAll('.uncompleted');
+    let uncompletedArr = Array.from(uncompleted);
+    let deleted = document.querySelectorAll('.deleted');
+    let deletedArr = Array.from(deleted);
     for (i = 0; i < uncompletedArr.length; i++) {
         uncompletedArr[i].classList.remove('hidden');
     }
@@ -155,12 +229,12 @@ function showDeleted() {
     uLong.classList.add('hidden');
     dShort.classList.add('hidden');
     // All completed, uncompleted and deleted todos
-    const completed = document.querySelectorAll('.completed');
-    const completedArr = Array.from(completed);
-    const uncompleted = document.querySelectorAll('.uncompleted');
-    const uncompletedArr = Array.from(uncompleted);
-    const deleted = document.querySelectorAll('.deleted');
-    const deletedArr = Array.from(deleted);
+    let completed = document.querySelectorAll('.completed');
+    let completedArr = Array.from(completed);
+    let uncompleted = document.querySelectorAll('.uncompleted');
+    let uncompletedArr = Array.from(uncompleted);
+    let deleted = document.querySelectorAll('.deleted');
+    let deletedArr = Array.from(deleted);
     for (i = 0; i < uncompletedArr.length; i++) {
         uncompletedArr[i].classList.add('hidden');
     }
@@ -182,13 +256,14 @@ function unfocusInput() {
     document.getElementById('todo-input').blur();
 }
 
-// The next function adds a todo to the list
+// Function that adds a todo to the list
 function addTodo() {
-    inputSelect = document.querySelector('#todo-input');
-    inputValue = inputSelect.value.trimStart();
+    let inputSelect = document.querySelector('#todo-input');
+    let inputValue = inputSelect.value.trimStart();
     //To Do div
     const todoDiv = document.createElement('div');
-    todoDiv.classList.add('uncompleted');
+    todoDiv.tabIndex = '1';
+    todoDiv.classList.add('todo', 'uncompleted');
     //Create li
     const newTodo = document.createElement('p');
     newTodo.innerText = inputValue;
@@ -199,3 +274,22 @@ function addTodo() {
     console.log(inputValue);
     console.log('Works!');
 }
+
+// Function to complete a todo
+function completeTodo() {
+    let uncompleted = document.querySelectorAll('.uncompleted');
+    let uncompletedArr = Array.from(uncompleted);
+    console.log('Works!');
+    uncompletedArr[0].classList.remove('uncompleted');
+    uncompletedArr[0].classList.add('completed');
+    uncompletedArr[0].classList.add('hidden');
+}
+
+//sdfgdsfgsd
+function deleteTodo() {}
+
+function editTodo() {}
+
+function resetTodo() {}
+
+function unfocusTodo() {}
