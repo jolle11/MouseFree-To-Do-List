@@ -39,18 +39,6 @@ body {
 .red {
     color: red;
 }
-.completed {
-    color: white;
-    background: green;
-}
-.uncompleted {
-    color: white;
-    background: red;
-}
-.deleted {
-    color: white;
-    background: black;
-}
 
 /* TODO INPUT */
 .todos-input {
@@ -69,4 +57,19 @@ input {
     padding-top: 5rem;
     align-items: center;
     flex-direction: column;
+}
+.todo:focus {
+    border: yellow 0.2rem solid;
+}
+.completed {
+    color: white;
+    background: green;
+}
+.uncompleted {
+    color: white;
+    background: red;
+}
+.deleted {
+    color: white;
+    background: black;
 }
