@@ -48,14 +48,14 @@ The goal is to make a page which is **100% navigable** with the keyboard.
 -   ~~Create functions for A, C, U and D.~~
     -   ~~When key is pressed display correct title.~~
     -   ~~When key is pressed display corresponding to do's.~~
--   Create function for UP/DOWN ARROWS.
+-   Create function for UP/DOWN ARROWS. **Thinking of changing to just the TAB key**
 -   Create function for NUMBERS (1-9).
 -   Create functions for ENTER.
     -   ~~Focus to the input~~.
     -   ~~Add todo~~.
-    -   Complete a todo.
+    -   Complete a todo. **Thinking of changing it to F key (finished)**
 -   Create function for E.
--   Create function for R.
+-   Create function for R. **Thinking to get rid of it. Easier to create a new todo.**
 -   ~~Create function for ESC.~~
 -   Comment for better understanding.
 
