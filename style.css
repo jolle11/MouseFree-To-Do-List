@@ -29,8 +29,8 @@ body {
     padding: 0 2rem;
 }
 
-/* ALL, COMPLETED, UNCOMPLETED & DELETED */
-.acud {
+/* ALL, COMPLETED, UNCOMPLETED */
+.acu {
     justify-content: center;
 }
 .green {
@@ -68,8 +68,4 @@ input {
 .uncompleted {
     color: white;
     background: red;
-}
-.deleted {
-    color: white;
-    background: black;
 }
