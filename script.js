@@ -6,7 +6,7 @@ const todo = document.querySelector('.todo');
 const completed = document.querySelector('.completed');
 const uncompleted = document.querySelector('.uncompleted');
 
-//ACUD selectors
+//ACU selectors
 const aShort = document.querySelector('#a-short');
 const aLong = document.querySelector('#a-long');
 const cShort = document.querySelector('#c-short');
@@ -18,7 +18,7 @@ const uLong = document.querySelector('#u-long');
 
 // This next event listener has the direct function to change the display of each titles
 // and to show the correct to do's, etc. Example: Key C shows title completed
-// and short title for All, Uncompleted and Deleted and only the completed to do's.
+// and short title for All and Uncompleted and only the completed to do's.
 document.addEventListener('keydown', (e) => {
     if (e.code === 'Enter') {
         showUncompleted(e);
@@ -171,7 +171,7 @@ function showAll() {
     aShort.classList.add('hidden');
     cLong.classList.add('hidden');
     uLong.classList.add('hidden');
-    // All completed, uncompleted and deleted todos
+    // All completed and uncompleted todos
     let completed = document.querySelectorAll('.completed');
     let completedArr = Array.from(completed);
     let uncompleted = document.querySelectorAll('.uncompleted');
@@ -190,7 +190,7 @@ function showCompleted() {
     aLong.classList.add('hidden');
     cShort.classList.add('hidden');
     uLong.classList.add('hidden');
-    // All completed, uncompleted and deleted todos
+    // All completed and uncompleted todos
     let completed = document.querySelectorAll('.completed');
     let completedArr = Array.from(completed);
     let uncompleted = document.querySelectorAll('.uncompleted');
@@ -209,7 +209,7 @@ function showUncompleted() {
     aLong.classList.add('hidden');
     cLong.classList.add('hidden');
     uShort.classList.add('hidden');
-    // All completed, uncompleted and deleted todos
+    // All completed and uncompleted todos
     let completed = document.querySelectorAll('.completed');
     let completedArr = Array.from(completed);
     let uncompleted = document.querySelectorAll('.uncompleted');
