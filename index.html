@@ -4,13 +4,16 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="style.css" />
         <title>MouseFree To Do List</title>
     </head>
     <body>
         <main>
-            <!-- All, Completed, Uncompleted and Deleted sections-->
-            <div class="acud flex">
+            <!-- All, Completed and Uncompleted titles-->
+            <div class="acu flex">
                 <p id="a-short" class="">A</p>
                 <p id="a-long" class="tt-padding">All</p>
                 <p id="c-short" class="green">C</p>
@@ -18,24 +21,41 @@
                 <p id="u-short" class="red">U</p>
                 <p id="u-long" class="red tt-padding">Uncompleted</p>
             </div>
+            <!-- Input for the todo. -->
             <div class="todos-input flex">
-                <!-- Input for the todo. -->
                 <input type="text" name="todo-input" id="todo-input" placeholder="Press ENTER to start writing ✍️" />
             </div>
             <!-- Where the todos are going to be when written. -->
             <div class="todos flex">
                 <!-- Structure when the todo is created -->
-                <div tabindex="1" class="todo completed">
+                <!-- 
+                <div class="todo uncompleted">
                     <p class="todo-text">Do this and that</p>
-                </div>
-                <div tabindex="1" class="todo uncompleted">
-                    <p class="todo-text">Do this and that</p>
-                </div>
-                <div tabindex="1" class="todo uncompleted">
-                    <p class="todo-text">Do this and that 2</p>
-                </div>
+                </div> 
+                -->
             </div>
         </main>
+        <!-- Footer with the key shortcuts -->
+        <footer class="shown">
+            <div class="keys">
+                <ul>
+                    <li>A - Shows all to do.</li>
+                    <li>C - Shows completed to do.</li>
+                </ul>
+                <ul>
+                    <li>U - Shows uncompleted to do.</li>
+                    <li>K - Show/Hide the shortcuts.</li>
+                </ul>
+                <ul>
+                    <li>1-9 - Complete or delete a specific todo (works in order).</li>
+                    <li>ENTER - Focus the input to add the todo.</li>
+                </ul>
+                <ul>
+                    <li>ENTER - Add todo to the list (once it's written).</li>
+                    <li>ESC - Deselects the text field.</li>
+                </ul>
+            </div>
+        </footer>
         <script src="script.js"></script>
     </body>
 </html>
