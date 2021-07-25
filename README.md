@@ -16,7 +16,6 @@ The goal is to make a page which is **100% navigable** with the keyboard.
 | NUMBERS (1-9) | Changes the class of / deletes a specific todo (works in order).                                   | 1, 2, 3, 4, 5, 6, 7, 8, 9 | Digit1, Digit2, Digit3, Digit4, Digit5, Digit6, Digit7, Digit8, Digit9 |
 |     ENTER     | Used to focus the input to add the todo.                                                           | Enter                     | Enter                                                                  |
 |     ENTER     | Add todo to the list (once it's written).                                                          | Enter                     | Enter                                                                  |
-|     ENTER     | Complete a todo (when selected).                                                                   | Enter                     | Enter                                                                  |
 |      ESC      | Deselects the text field/todo so you can navigate easily through the to do or the different menus. | Escape                    | Escape                                                                 |
 
 ---
@@ -34,10 +33,10 @@ The goal is to make a page which is **100% navigable** with the keyboard.
 
 ### CSS
 
--   Style the document.
--   Decide which font to use.
--   Create classes needed
--   Comment for better understanding.
+-   ~~Style the document.~~
+-   ~~Decide which font to use. >> Rubik~~
+-   ~~Create classes needed.~~
+-   ~~Comment for better understanding.~~
 
 ### JAVASCRIPT
 
@@ -49,7 +48,7 @@ The goal is to make a page which is **100% navigable** with the keyboard.
     -   ~~Focus to the input~~.
     -   ~~Add todo~~.
 -   ~~Create function for ESC.~~
--   Comment for better understanding.
+-   ~~Comment for better understanding.~~
 
 ---
 
