@@ -14,10 +14,10 @@ html {
 body {
     height: 100vh;
     font-size: 3rem;
-    display: flex;
     justify-content: center;
     align-items: top;
     padding-top: 15rem;
+    font-family: 'Rubik', sans-serif;
 }
 .flex {
     display: flex;
@@ -32,6 +32,7 @@ body {
 /* ALL, COMPLETED, UNCOMPLETED */
 .acu {
     justify-content: center;
+    height: 10vh;
 }
 .green {
     color: green;
@@ -42,7 +43,6 @@ body {
 
 /* TODO INPUT */
 .todos-input {
-    padding-top: 5rem;
     justify-content: center;
 }
 input {
@@ -50,6 +50,7 @@ input {
     text-align: center;
     border: none;
     outline: none;
+    font-family: 'Rubik', sans-serif;
 }
 
 /* TODOS */
@@ -58,8 +59,10 @@ input {
     align-items: center;
     flex-direction: column;
 }
-.todo:focus {
-    border: yellow 0.2rem solid;
+.todo {
+    padding: 0.2rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
 }
 .completed {
     color: white;
@@ -68,4 +71,24 @@ input {
 .uncompleted {
     color: white;
     background: red;
+}
+
+/* FOOTER */
+footer {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 2rem 2rem 2rem;
+    z-index: -1;
+}
+.keys {
+    display: grid;
+    grid-column-gap: 5rem;
+    grid-template-columns: repeat(4, auto);
+}
+.keys ul {
+    list-style: none;
+    font-size: medium;
 }
