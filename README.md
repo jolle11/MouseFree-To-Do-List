@@ -41,7 +41,7 @@ The goal is to make a page which is **100% navigable** with the keyboard.
 
 ### JAVASCRIPT
 
--   ~~Create functions for A, C and K.~~
+-   ~~Create functions for A, C and U.~~
     -   ~~When key is pressed display correct title.~~
     -   ~~When key is pressed display corresponding to do's.~~
 -   ~~Create function for NUMBERS (1-9).~~
@@ -49,6 +49,7 @@ The goal is to make a page which is **100% navigable** with the keyboard.
     -   ~~Focus to the input~~.
     -   ~~Add todo~~.
 -   ~~Create function for ESC.~~
+-   Create function for K.
 -   ~~Comment for better understanding.~~
 
 ---
