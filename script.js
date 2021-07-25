@@ -5,6 +5,7 @@ const todos = document.querySelector('.todos');
 const todo = document.querySelector('.todo');
 const completed = document.querySelector('.completed');
 const uncompleted = document.querySelector('.uncompleted');
+const footer = document.querySelector('footer');
 
 //ACU selectors
 const aShort = document.querySelector('#a-short');
@@ -48,6 +49,18 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+//Hide or show the key shortcuts
+document.addEventListener('keydown', (e) => {
+    if (e.code === 'KeyK' && footer.classList.contains('shown') && todoInput.value === '') {
+        console.log('Works');
+        footer.classList.remove('shown');
+        footer.classList.add('hidden');
+    } else {
+        footer.classList.add('shown');
+        footer.classList.remove('hidden');
+    }
+});
+
 // This event listener calls the function addTodo, which adds the to do to the list.
 todoInput.addEventListener('keydown', (e) => {
     if (e.code === 'Enter') {
@@ -66,92 +79,74 @@ document.addEventListener('keydown', (e) => {
     let uncompletedArr = Array.from(uncompleted);
     if (e.code === 'Digit1' && todoInput.value === '' && aLong.classList.contains('hidden') && cLong.classList.contains('hidden')) {
         i = 0;
-        console.log(i);
         uncompletedArr[i].focus();
         completeTodo(uncompletedArr[i]);
     } else if (e.code === 'Digit1' && todoInput.value === '' && aLong.classList.contains('hidden') && uLong.classList.contains('hidden')) {
         i = 0;
-        console.log(i);
         completedArr[i].focus();
         deleteTodo(completedArr[i]);
     } else if (e.code === 'Digit2' && todoInput.value === '' && aLong.classList.contains('hidden') && cLong.classList.contains('hidden')) {
         i = 1;
-        console.log(i);
         uncompletedArr[i].focus();
         completeTodo(uncompletedArr[i]);
     } else if (e.code === 'Digit2' && todoInput.value === '' && aLong.classList.contains('hidden') && uLong.classList.contains('hidden')) {
         i = 1;
-        console.log(i);
         completedArr[i].focus();
         deleteTodo(completedArr[i]);
     } else if (e.code === 'Digit3' && todoInput.value === '' && aLong.classList.contains('hidden') && cLong.classList.contains('hidden')) {
         i = 2;
-        console.log(i);
         uncompletedArr[i].focus();
         completeTodo(uncompletedArr[i]);
     } else if (e.code === 'Digit3' && todoInput.value === '' && aLong.classList.contains('hidden') && uLong.classList.contains('hidden')) {
         i = 2;
-        console.log(i);
         completedArr[i].focus();
         deleteTodo(completedArr[i]);
     } else if (e.code === 'Digit4' && todoInput.value === '' && aLong.classList.contains('hidden') && cLong.classList.contains('hidden')) {
         i = 3;
-        console.log(i);
         uncompletedArr[i].focus();
         completeTodo(uncompletedArr[i]);
     } else if (e.code === 'Digit4' && todoInput.value === '' && aLong.classList.contains('hidden') && uLong.classList.contains('hidden')) {
         i = 3;
-        console.log(i);
         completedArr[i].focus();
         deleteTodo(completedArr[i]);
     } else if (e.code === 'Digit5' && todoInput.value === '' && aLong.classList.contains('hidden') && cLong.classList.contains('hidden')) {
         i = 4;
-        console.log(i);
         uncompletedArr[i].focus();
         completeTodo(uncompletedArr[i]);
     } else if (e.code === 'Digit5' && todoInput.value === '' && aLong.classList.contains('hidden') && uLong.classList.contains('hidden')) {
         i = 4;
-        console.log(i);
         completedArr[i].focus();
         deleteTodo(completedArr[i]);
     } else if (e.code === 'Digit6' && todoInput.value === '' && aLong.classList.contains('hidden') && cLong.classList.contains('hidden')) {
         i = 5;
-        console.log(i);
         uncompletedArr[i].focus();
         completeTodo(uncompletedArr[i]);
     } else if (e.code === 'Digit6' && todoInput.value === '' && aLong.classList.contains('hidden') && uLong.classList.contains('hidden')) {
         i = 5;
-        console.log(i);
         completedArr[i].focus();
         deleteTodo(completedArr[i]);
     } else if (e.code === 'Digit7' && todoInput.value === '' && aLong.classList.contains('hidden') && cLong.classList.contains('hidden')) {
         i = 6;
-        console.log(i);
         uncompletedArr[i].focus();
         completeTodo(uncompletedArr[i]);
     } else if (e.code === 'Digit7' && todoInput.value === '' && aLong.classList.contains('hidden') && uLong.classList.contains('hidden')) {
         i = 6;
-        console.log(i);
         completedArr[i].focus();
         deleteTodo(completedArr[i]);
     } else if (e.code === 'Digit8' && todoInput.value === '' && aLong.classList.contains('hidden') && cLong.classList.contains('hidden')) {
         i = 7;
-        console.log(i);
         uncompletedArr[i].focus();
         completeTodo(uncompletedArr[i]);
     } else if (e.code === 'Digit8' && todoInput.value === '' && aLong.classList.contains('hidden') && uLong.classList.contains('hidden')) {
         i = 7;
-        console.log(i);
         completedArr[i].focus();
         deleteTodo(completedArr[i]);
     } else if (e.code === 'Digit9' && todoInput.value === '' && aLong.classList.contains('hidden') && cLong.classList.contains('hidden')) {
         i = 8;
-        console.log(i);
         uncompletedArr[i].focus();
         completeTodo(uncompletedArr[i]);
     } else if (e.code === 'Digit9' && todoInput.value === '' && aLong.classList.contains('hidden') && uLong.classList.contains('hidden')) {
         i = 8;
-        console.log(i);
         completedArr[i].focus();
         deleteTodo(completedArr[i]);
     }
@@ -164,6 +159,7 @@ window.onload = function () {
     showUncompleted();
 };
 
+// Function to show all the todos
 function showAll() {
     aLong.classList.remove('hidden');
     cShort.classList.remove('hidden');
@@ -183,6 +179,8 @@ function showAll() {
         completedArr[i].classList.remove('hidden');
     }
 }
+
+// Function to show all completed todos
 function showCompleted() {
     aShort.classList.remove('hidden');
     cLong.classList.remove('hidden');
@@ -202,6 +200,8 @@ function showCompleted() {
         completedArr[i].classList.remove('hidden');
     }
 }
+
+// Function to show all uncompleted todos
 function showUncompleted() {
     aShort.classList.remove('hidden');
     cShort.classList.remove('hidden');
@@ -238,7 +238,6 @@ function addTodo() {
     let inputValue = inputSelect.value.trimStart();
     //To Do div
     const todoDiv = document.createElement('div');
-    todoDiv.tabIndex = '1';
     todoDiv.classList.add('todo', 'uncompleted');
     //Create li
     const newTodo = document.createElement('p');
@@ -247,13 +246,10 @@ function addTodo() {
     todoDiv.appendChild(newTodo);
     //Append todo list
     todos.appendChild(todoDiv);
-    console.log(inputValue);
-    console.log('Works!');
 }
 
 // Function to complete a todo
 function completeTodo(todo) {
-    console.log('Works!');
     todo.classList.remove('uncompleted');
     todo.classList.add('completed');
     todo.classList.add('hidden');
@@ -261,6 +257,5 @@ function completeTodo(todo) {
 
 // Function for deleting a todo
 function deleteTodo(todo) {
-    console.log('Works!');
     todo.remove();
 }
