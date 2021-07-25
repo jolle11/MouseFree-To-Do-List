@@ -49,7 +49,7 @@ The goal is to make a page which is **100% navigable** with the keyboard.
     -   ~~Focus to the input~~.
     -   ~~Add todo~~.
 -   ~~Create function for ESC.~~
--   Create function for K.
+-   ~~Create function for K.~~
 -   ~~Comment for better understanding.~~
 
 ---
