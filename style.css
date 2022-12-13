@@ -1,94 +1,107 @@
 /* GLOBAL */
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
+	box-sizing: border-box;
+	font-size: 62.5%;
 }
+
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
 }
+
 body {
-    height: 100vh;
-    font-size: 3rem;
-    justify-content: center;
-    align-items: top;
-    padding-top: 15rem;
-    font-family: 'Rubik', sans-serif;
+	height: 100vh;
+	font-size: 3rem;
+	justify-content: center;
+	align-items: top;
+	padding-top: 15rem;
+	font-family: 'Rubik', sans-serif;
 }
+
 .flex {
-    display: flex;
+	display: flex;
 }
+
 .hidden {
-    display: none;
+	display: none;
 }
+
 .tt-padding {
-    padding: 0 2rem;
+	padding: 0 2rem;
 }
 
 /* ALL, COMPLETED, UNCOMPLETED */
 .acu {
-    justify-content: center;
-    height: 10vh;
+	justify-content: center;
+	height: 10vh;
 }
+
 .green {
-    color: green;
+	color: green;
 }
+
 .red {
-    color: red;
+	color: red;
 }
 
 /* TODO INPUT */
 .todos-input {
-    justify-content: center;
+	justify-content: center;
 }
+
 input {
-    width: 30rem;
-    text-align: center;
-    border: none;
-    outline: none;
-    font-family: 'Rubik', sans-serif;
+	width: 30rem;
+	text-align: center;
+	border: none;
+	outline: none;
+	font-family: 'Rubik', sans-serif;
 }
 
 /* TODOS */
 .todos {
-    padding-top: 5rem;
-    align-items: center;
-    flex-direction: column;
+	padding-top: 5rem;
+	align-items: center;
+	flex-direction: column;
 }
+
 .todo {
-    padding: 0.2rem;
-    margin-bottom: 0.5rem;
-    border-radius: 0.5rem;
+	padding: 0.2rem;
+	margin-bottom: 0.5rem;
+	border-radius: 0.5rem;
 }
+
 .completed {
-    color: white;
-    background: green;
+	color: white;
+	background: green;
 }
+
 .uncompleted {
-    color: white;
-    background: red;
+	color: white;
+	background: red;
 }
 
 /* FOOTER */
 footer {
-    width: 100vw;
-    position: absolute;
-    bottom: 0;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 0 2rem 2rem 2rem;
-    z-index: -1;
+	width: 100vw;
+	position: absolute;
+	bottom: 0;
+	justify-content: center;
+	align-items: flex-end;
+	padding: 0 2rem 2rem 2rem;
+	z-index: -1;
 }
+
 .keys {
-    display: grid;
-    grid-column-gap: 5rem;
-    grid-template-columns: repeat(4, auto);
+	display: grid;
+	grid-column-gap: 5rem;
+	grid-template-columns: repeat(4, auto);
 }
+
 .keys ul {
-    list-style: none;
-    font-size: medium;
+	list-style: none;
+	font-size: medium;
 }
